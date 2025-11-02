@@ -14,7 +14,7 @@ const  Info = ({username} ) => {
 
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
-    const urlOfData = 'http://localhost:5000/api/tables'
+    const urlOfData = 'https://database-2.cb2uwc0cse3b.us-east-2.rds.amazonaws.com/api/tables'
 
 
     const [isUpdating, setIsUpdating] = useState(false); 

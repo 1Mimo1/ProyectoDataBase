@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const express = require('express');
 const cors = require('cors') //ESTO RESUELVE LO DE PODER VER INFO (PERMISOSSS)
 //const path = require('path')
-
+const allowedOrigins = ['https://databaseproje.netlify.app'];
 dotenv.config({ path: 'server.env' }); 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -29,7 +29,7 @@ async function initializeDatabase () {
         console.log("Nope!", error.message)
     }
 }
-app.use(cors())
+app.use(cors({origin: allowedOrigins}))
 app.use(express.json())
 app.get('/', (req, res) => {
     res.status(200).json({status: "API"});

@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000/api/tables';
+const API_BASE_URL = 'https://database-2.cb2uwc0cse3b.us-east-2.rds.amazonaws.com/api/tables';
 
 /**
  * * @param {string} 
