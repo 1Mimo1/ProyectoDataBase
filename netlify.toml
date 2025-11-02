@@ -2,4 +2,4 @@
   from = "/api/*"
   to = "http://18.191.193.151:5000/:splat"
   status = 200
-  force = true
+  force = true 
