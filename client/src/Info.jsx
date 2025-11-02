@@ -14,7 +14,7 @@ const  Info = ({username} ) => {
 
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
-    const urlOfData = 'http://18.191.193.151:5000/api'
+    const urlOfData = 'https://18.191.193.151:5000/api'
 
 
     const [isUpdating, setIsUpdating] = useState(false); 

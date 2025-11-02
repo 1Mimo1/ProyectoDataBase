@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://18.191.193.151:5000/api';
+const API_BASE_URL = 'https://18.191.193.151:5000/api';
 
 /**
  * * @param {string} 
