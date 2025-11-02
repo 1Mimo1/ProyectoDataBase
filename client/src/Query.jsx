@@ -16,7 +16,7 @@ const Query = () => {
                     setLoading(true);
                     setError(null);
                 
-                    const response = await fetch(`http://localhost:5000/api/query/${querySelected}`);
+                    const response = await fetch(`/api/query/${querySelected}`);
                     
                     if (!response.ok) {
                         throw new Error(`HTTP error! Status: ${response.status}`);
