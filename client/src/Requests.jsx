@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://database-2.cb2uwc0cse3b.us-east-2.rds.amazonaws.com/api/tables';
+const API_BASE_URL = 'http://18.191.193.151:5000/api';
 
 /**
  * * @param {string} 
@@ -6,7 +6,7 @@ const API_BASE_URL = 'https://database-2.cb2uwc0cse3b.us-east-2.rds.amazonaws.co
  */
 export const createRecord = async (tableName, newData) => {
     try {
-        const response = await fetch(`${API_BASE_URL}/${tableName}`, {
+        const response = await fetch(`${API_BASE_URL}/tables/${tableName}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export const createRecord = async (tableName, newData) => {
  */
 export const deleteRecord = async (tableName, pkColumn, pkValue) => {
     try {
-        const response = await fetch(`${API_BASE_URL}/${tableName}/${pkColumn}/${pkValue}`, {
+        const response = await fetch(`${API_BASE_URL}/tables/${tableName}/${pkColumn}/${pkValue}`, {
             method: 'DELETE',
         });
         
@@ -60,7 +60,7 @@ export const deleteRecord = async (tableName, pkColumn, pkValue) => {
  */
 export const updateRecord = async (tableName, pkColumn, pkValue, updatedData) => {
     try {
-        const response = await fetch(`${API_BASE_URL}/${tableName}/${pkColumn}/${pkValue}`, {
+        const response = await fetch(`${API_BASE_URL}/tables/${tableName}/${pkColumn}/${pkValue}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

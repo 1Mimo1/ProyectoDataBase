@@ -14,7 +14,7 @@ const  Info = ({username} ) => {
 
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
-    const urlOfData = 'https://database-2.cb2uwc0cse3b.us-east-2.rds.amazonaws.com/api/tables'
+    const urlOfData = 'http://18.191.193.151:5000/api'
 
 
     const [isUpdating, setIsUpdating] = useState(false); 
@@ -29,7 +29,7 @@ const  Info = ({username} ) => {
     const fetchTableData = async (tableToFetch) => {
         setLoading(true);
         try {
-            let urlOfTable = `${urlOfData}/${tableToFetch}`
+            let urlOfTable = `${urlOfData}/tables/${tableToFetch}`
             const response = await fetch(urlOfTable)
             const data = await response.json()
             if(!response.ok) throw new Error("Failed to fetch table data")
@@ -145,7 +145,7 @@ const handleUpdateSubmit = async (e) => {
     useEffect(()=>{
         const fetchTables = async () => {
             try {
-               const response = await fetch (urlOfData) 
+               const response = await fetch (`${urlOfData}/tables`) 
                if(!response.ok){
                  throw new Error('Error buscando', response.status)
                }
