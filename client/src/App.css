@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+*,
+::before,
+::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+    --color1: #BAFF39;
+    --color2:white  ;
+    --colorbc: #6E6E6E;
+    --color3: rgb(54, 54, 54);
+    
+}
+html{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 600px;
+}
+.login_div{
+  background-color: var(--color3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  width: 400px;
+  border-radius: 10px;
+}
+input{
+  width: 80%;
+  height: 40px;
+  padding-left: 10px;
+  color: var(--colorbc);
+}
+input:focus{
+  outline: none;
+}
+.login_button{
+  margin-top: auto;
+  width: 100%;
+  background-color: #BAFF39;
+  border: none;
+  height: 50px;
+  font-size: 20px;
+  color: var(--colorbc);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+h1{
+  margin-top: 10px;
+  color: var(--color1);
+}
+#username{
+  margin-top: 15px;
+}
+#password{
+  margin-top: 10px;
+}
