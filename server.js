@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 const backendTrialsSJJSJSJ =  {
     message: "si se vio"
 }
-app.get('/api/tables', async (req, res) => {
+app.get('/tables', async (req, res) => {
     //res.json(backendTrialsSJJSJSJ)
     try {
         const sql = `
@@ -104,7 +104,7 @@ const savedQueries = {
         join Suministros on Detalle_suministros.ID_suministro = Suministros.ID_suministro
         where Sala.No_de_sala = 109;` 
 };
-app.get(`/api/query/:queryInserted`, async( req, res) => {
+app.get(`/query/:queryInserted`, async( req, res) => {
     const queryId = req.params.queryInserted
     const sql = savedQueries[queryId]
     if(!sql){
@@ -120,7 +120,7 @@ app.get(`/api/query/:queryInserted`, async( req, res) => {
         res.status(500).json({error: error.message})
     }
 })
-app.get(`/api/tables/:tableInformation`, async( req, res) => {
+app.get(`/tables/:tableInformation`, async( req, res) => {
 
     const tableInformation = req.params.tableInformation.trim()
     const sql = `SELECT * FROM \`${tableInformation}\``;
@@ -135,7 +135,7 @@ app.get(`/api/tables/:tableInformation`, async( req, res) => {
         console.error(error)
     }
 })
-app.post(`/api/tables/:tableName`, async (req, res) => {
+app.post(`/tables/:tableName`, async (req, res) => {
     const tableName = req.params.tableName.trim();
     const data = req.body;
     
@@ -156,7 +156,7 @@ app.post(`/api/tables/:tableName`, async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-app.delete(`/api/tables/:tableName/:colName/:recordValue`, async (req, res) => {
+app.delete(`/tables/:tableName/:colName/:recordValue`, async (req, res) => {
     const tableName = req.params.tableName.trim();
     const colName = req.params.colName.trim()
     const recordValue = req.params.recordValue
@@ -179,7 +179,7 @@ app.delete(`/api/tables/:tableName/:colName/:recordValue`, async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-app.put(`/api/tables/:tableName/:colName/:recordValue`, async (req, res) => {
+app.put(`/tables/:tableName/:colName/:recordValue`, async (req, res) => {
     const tableName = req.params.tableName.trim();
     const colName = req.params.colName.trim();   
     const recordValue = req.params.recordValue;
