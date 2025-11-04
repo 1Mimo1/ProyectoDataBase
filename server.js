@@ -139,7 +139,7 @@ const savedQueries = {
 };
 app.get(`/query/:queryInserted`, async( req, res) => {
     const queryId = req.params.queryInserted
-    const sql = savedQueries[queryId]
+    const sql = savedQueries[queryId]  
     if(!sql){
         return res.status(404).json({error: 'Nothing'})
     }
