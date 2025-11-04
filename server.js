@@ -113,10 +113,10 @@ const savedQueries = {
         join Detalle_dosis on Paciente.No_de_paciente = Detalle_dosis.No_de_paciente
         where Detalle_dosis.No_de_paciente = 'P02127'`,
     '11': `select Paciente.*, Medico.*
-from Paciente
-join Detalle_medico_local on Paciente.No_de_paciente = Detalle_medico_local.No_de_paciente
-join Medico on Detalle_medico_local.Cod_medico = Medico.Cod_medico
-where Paciente.Nombre = 'Ivan'`,
+        from Paciente
+        join Detalle_medico_local on Paciente.No_de_paciente = Detalle_medico_local.No_de_paciente
+        join Medico on Detalle_medico_local.Cod_medico = Medico.Cod_medico
+        where Paciente.Nombre = 'Ivan'`,
     '12':`Select Personal.*, Sala.*
         from Personal
         join Detalle_de_personal on Personal.No_de_personal = Detalle_de_personal.No_de_personal
