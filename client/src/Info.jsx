@@ -291,7 +291,7 @@ if (isUpdating) {
                         <button className="buttons1" onClick={() => handleNavigateToQuery(9)}>
                             Info Ivan
                         </button>
-                        <button className="buttons1" onClick={() => handleNavigateToQuery(9)}>
+                        <button className="buttons1" onClick={() => handleNavigateToQuery(10)}>
                             Info Josue
                         </button>
                     </div>

@@ -108,7 +108,10 @@ const savedQueries = {
             join Detalle_parentesco on Paciente.No_de_paciente = Detalle_parentesco.No_de_paciente
             join Parentescos on Detalle_parentesco.Cod_parentesco = Parentescos.Cod_parentesco
             where Paciente.Nombre = 'Ivan'`,
-    '10':``
+    '10':`select Paciente.Nombre, Detalle_dosis.*
+        from Paciente
+        join Detalle_dosis on Paciente.No_de_paciente = Detalle_dosis.No_de_paciente
+        where Detalle_dosis.No_de_paciente = 'P02127'`
 };
 app.get(`/query/:queryInserted`, async( req, res) => {
     const queryId = req.params.queryInserted
