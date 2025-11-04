@@ -122,13 +122,15 @@ const savedQueries = {
         join Detalle_de_personal on Personal.No_de_personal = Detalle_de_personal.No_de_personal
         join Sala on Detalle_de_personal.No_de_sala = Sala.No_de_sala
         where Sala.No_de_sala = 201` ,
-    '13': `Select top 5 Paciente.*
+    '13':` Select Paciente.*
         from Paciente
         join Detalle_pacientes_sala on Paciente.No_de_paciente = Detalle_pacientes_sala.No_de_paciente
-        where Fecha_de_ingreso > '2021-05-07'`,
-    '14':`select top 5 Personal.Nombres, Personal.Apellidos, Personal.Cod_turno as Turnostrabajados
+        where Fecha_de_ingreso > '2021-05-07'
+        LIMIT 5;`,
+    '14':`select Personal.Nombres, Personal.Apellidos, Personal.Cod_turno as Turnostrabajados
         from Personal
-        where Personal.Cod_turno > 4`,
+        where Personal.Cod_turno > 4
+        LIMIT 5`,
     '15':`select Paciente.*, Medico.Cod_medico, Medico.Nombre_completo
         from Paciente
         join Detalle_medico_local on Paciente.No_de_paciente = Detalle_medico_local.No_de_paciente
