@@ -300,6 +300,9 @@ if (isUpdating) {
                         <button className="buttons1" onClick={() => handleNavigateToQuery(12)}>
                             Lab Gali
                         </button>
+                        <button className="buttons1" onClick={() => handleNavigateToQuery(13)}>
+                            Top 5
+                        </button>
                     </div>
                 </div>     
                 <div className="info_display">

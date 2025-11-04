@@ -118,10 +118,14 @@ const savedQueries = {
         join Medico on Detalle_medico_local.Cod_medico = Medico.Cod_medico
         where Paciente.Nombre = 'Ivan'`,
     '12':`Select Personal.*, Sala.*
-from Personal
-join Detalle_de_personal on Personal.No_de_personal = Detalle_de_personal.No_de_personal
-join Sala on Detalle_de_personal.No_de_sala = Sala.No_de_sala
-where Sala.No_de_sala = 201` 
+        from Personal
+        join Detalle_de_personal on Personal.No_de_personal = Detalle_de_personal.No_de_personal
+        join Sala on Detalle_de_personal.No_de_sala = Sala.No_de_sala
+        where Sala.No_de_sala = 201` ,
+    '13': `Select top 5 Paciente.*
+        from Paciente
+        join Detalle_pacientes_sala on Paciente.No_de_paciente = Detalle_pacientes_sala.No_de_paciente
+        where Fecha_de_ingreso > '2021-05-07'`
 };
 app.get(`/query/:queryInserted`, async( req, res) => {
     const queryId = req.params.queryInserted
