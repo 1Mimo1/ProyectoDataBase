@@ -118,10 +118,10 @@ const savedQueries = {
         join Medico on Detalle_medico_local.Cod_medico = Medico.Cod_medico
         where Paciente.Nombre = 'Ivan'`,
     '12':`Select Personal.*, Sala.*
-        from Personal
-        join Detalle_de_personal on Personal.No_de_personal = Detalle_de_personal.No_de_personal
-        join Sala on Detalle_de_personal.No_de_sala = Sala.No_de_sala
-        where Personal.No_de_personal = 'P101'` 
+from Personal
+join Detalle_de_personal on Personal.No_de_personal = Detalle_de_personal.No_de_personal
+join Sala on Detalle_de_personal.No_de_sala = Sala.No_de_sala
+where Sala.No_de_sala = 201` 
 };
 app.get(`/query/:queryInserted`, async( req, res) => {
     const queryId = req.params.queryInserted
