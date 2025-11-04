@@ -125,7 +125,15 @@ const savedQueries = {
     '13': `Select top 5 Paciente.*
         from Paciente
         join Detalle_pacientes_sala on Paciente.No_de_paciente = Detalle_pacientes_sala.No_de_paciente
-        where Fecha_de_ingreso > '2021-05-07'`
+        where Fecha_de_ingreso > '2021-05-07'`,
+    '14':`select top 5 Personal.Nombres, Personal.Apellidos, Personal.Cod_turno as Turnostrabajados
+        from Personal
+        where Personal.Cod_turno > 4`,
+    '15':`select Paciente.*, Medico.Cod_medico, Medico.Nombre_completo
+        from Paciente
+        join Detalle_medico_local on Paciente.No_de_paciente = Detalle_medico_local.No_de_paciente
+        join Medico on Detalle_medico_local.Cod_medico = Medico.Cod_medico
+        where Detalle_medico_local.Cod_medico = 1`
 };
 app.get(`/query/:queryInserted`, async( req, res) => {
     const queryId = req.params.queryInserted

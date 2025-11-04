@@ -292,16 +292,22 @@ if (isUpdating) {
                             Info Ivan
                         </button>
                         <button className="buttons1" onClick={() => handleNavigateToQuery(10)}>
-                            Info Josue
+                            Info Medicamento Ivan
                         </button>
                         <button className="buttons1" onClick={() => handleNavigateToQuery(11)}>
-                            Info Medico
+                            Info Medico/Ivan
                         </button>
                         <button className="buttons1" onClick={() => handleNavigateToQuery(12)}>
                             Lab Gali
                         </button>
                         <button className="buttons1" onClick={() => handleNavigateToQuery(13)}>
                             Top 5
+                        </button>
+                        <button className="buttons1" onClick={() => handleNavigateToQuery(14)}>
+                            Doctor/Enfermera
+                        </button>
+                        <button className="buttons1" onClick={() => handleNavigateToQuery(15)}>
+                            Todos Pacientes de Doctor
                         </button>
                     </div>
                 </div>     
