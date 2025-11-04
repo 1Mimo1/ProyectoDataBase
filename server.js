@@ -117,11 +117,11 @@ from Paciente
 join Detalle_medico_local on Paciente.No_de_paciente = Detalle_medico_local.No_de_paciente
 join Medico on Detalle_medico_local.Cod_medico = Medico.Cod_medico
 where Paciente.Nombre = 'Ivan'`,
-    '12':`Select Personal.*, Sala.*
+    '12':`SSelect Personal.*, Sala.*
 from Personal
 join Detalle_de_personal on Personal.No_de_personal = Detalle_de_personal.No_de_personal
 join Sala on Detalle_de_personal.No_de_sala = Sala.No_de_sala
-where Personal.No_de_personal = P101` 
+where Personal.No_de_personal = 'P106'` 
 };
 app.get(`/query/:queryInserted`, async( req, res) => {
     const queryId = req.params.queryInserted
