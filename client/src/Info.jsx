@@ -288,6 +288,9 @@ if (isUpdating) {
                         <button className="buttons1" onClick={() => handleNavigateToQuery(8)}>
                             Medicacion Detallada
                         </button>
+                        <button className="buttons1" onClick={() => handleNavigateToQuery(9)}>
+                            Info Ivan
+                        </button>
                     </div>
                 </div>     
                 <div className="info_display">

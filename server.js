@@ -102,7 +102,12 @@ const savedQueries = {
         join Personal on Detalle_de_personal.No_de_personal = Personal.No_de_personal
         join Detalle_suministros on Personal.No_de_personal = Detalle_suministros.No_de_personal
         join Suministros on Detalle_suministros.ID_suministro = Suministros.ID_suministro
-        where Sala.No_de_sala = 109;` 
+        where Sala.No_de_sala = 109;` ,
+    '9':`select Paciente.*, Parentescos.*
+            from Paciente
+            join Detalle_parentesco on Paciente.No_de_paciente = Detalle_parentesco.No_de_paciente
+            join Parentescos on Detalle_parentesco.Cod_parentesco = Parentescos.Cod_parentesco
+            where Paciente.Nombre = 'Ivan'`
 };
 app.get(`/query/:queryInserted`, async( req, res) => {
     const queryId = req.params.queryInserted
