@@ -138,6 +138,9 @@ h2{
   color: var(--color1);
   margin-left: 10px;
 }
+.display_div{
+  width: 100%;
+}
 .info_display{
   display: flex;
   flex-direction: column;

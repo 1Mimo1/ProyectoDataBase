@@ -335,7 +335,7 @@ if (isUpdating) {
                             ))}
                         </>
                         ):(
-                            <h3>No data found</h3>
+                            <h3> No data </h3>
                         )}
                     </div>
                 </div>
