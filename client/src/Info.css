@@ -44,6 +44,8 @@ span{
 }
 .divisor{
   display: flex;
+  margin-left: 30px;
+  align-items: first;
 }
 /*SELEeeeeCT*/ 
 .p_select{
@@ -140,6 +142,7 @@ h2{
 }
 .display_div{
   width: 100%;
+  overflow-x: auto;
 }
 .info_display{
   display: flex;
