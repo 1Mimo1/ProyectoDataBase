@@ -229,15 +229,15 @@ app.put(`/tables/:tableName/:colName/:recordValue`, async (req, res) => {
         const [result] = await pool.query(sql, queryValues);
         
         if (result.affectedRows === 0) {
-            return res.status(404).json({ message: `Record with ${colName} ${recordValue} not found or no changes were made.` });
+            return res.status(404).json({ message: `Record with ${colName} ${recordValue} not found/Changes made` });
         }
 
         res.status(200).json({
-            message: `Record updated successfully in table ${tableName}`,
+            message: `Record updated successfully :) in ${tableName}`,
             affectedRows: result.affectedRows
         });
     } catch (error) {
-        console.error("Error updating record:", error);
+        console.error("Error updating record :( ", error);
         res.status(500).json({ error: error.message });
     }
 });

@@ -162,9 +162,9 @@ h2{
 }
 .single_key{
   color: var(--color1);
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 800;
-  margin: 15px;
+  margin: 12px;
   border-bottom: var(--color1) solid 1px;
 }
 .data_div{

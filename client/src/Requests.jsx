@@ -36,7 +36,7 @@ export const deleteRecord = async (tableName, pkColumn, pkValue) => {
             throw new Error(data.error || `Failed to delete record ID ${pkValue}`);
         }
         
-        console.log(`Success: Deleted ${data.affectedRows} record(s)`);
+        console.log(`Success! Deleted ${data.affectedRows} record :) `);
         return data;
     } catch (error) {
         console.error("Error in deleteRecord:", error);
