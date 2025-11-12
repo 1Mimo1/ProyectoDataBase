@@ -48,7 +48,7 @@ input:focus{
 .login_button{
   margin-top: auto;
   width: 100%;
-  background-color: #BAFF39;
+  background-color: var(--color1);
   border: none;
   height: 50px;
   font-size: 20px;

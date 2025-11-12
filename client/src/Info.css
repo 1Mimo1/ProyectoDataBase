@@ -165,7 +165,7 @@ h2{
   font-size: 15px;
   font-weight: 800;
   margin: 15px;
-  border-bottom: #BAFF39 solid 1px;
+  border-bottom: var(--color1) solid 1px;
 }
 .data_div{
   display: flex;
