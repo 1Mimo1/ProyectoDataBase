@@ -1,9 +1,5 @@
 const API_BASE_URL = '/api';
 
-/**
- * * @param {string} 
- * @param {object}
- */
 export const createRecord = async (tableName, newData) => {
     try {
         const response = await fetch(`${API_BASE_URL}/tables/${tableName}`, {
@@ -27,12 +23,7 @@ export const createRecord = async (tableName, newData) => {
         throw error;
     }
 };
-/**
- * @param {string} 
- * @param {string} idKey
- * @param {string|number} 
- 
- */
+
 export const deleteRecord = async (tableName, pkColumn, pkValue) => {
     try {
         const response = await fetch(`${API_BASE_URL}/tables/${tableName}/${pkColumn}/${pkValue}`, {
@@ -52,12 +43,7 @@ export const deleteRecord = async (tableName, pkColumn, pkValue) => {
         throw error;
     }
 };
-/** 
-* @param {string} 
- * @param {string}
- * @param {string|number}
- * @param {object}
- */
+
 export const updateRecord = async (tableName, pkColumn, pkValue, updatedData) => {
     try {
         const response = await fetch(`${API_BASE_URL}/tables/${tableName}/${pkColumn}/${pkValue}`, {

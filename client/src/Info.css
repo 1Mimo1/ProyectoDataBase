@@ -45,7 +45,7 @@ span{
 .divisor{
   display: flex;
   margin-left: 30px;
-  align-items: first;
+  align-items: flex-start;
 }
 /*SELEeeeeCT*/ 
 .p_select{
